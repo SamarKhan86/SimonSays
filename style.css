@@ -3,8 +3,8 @@ body {
 }
 
 .btn {
-  height: 175px;
-  width: 175px;
+  height: 11rem;
+  width: 11rem;
   border-radius: 20%;
   border: 10px solid black;
   margin: 1.5rem;
@@ -45,5 +45,15 @@ body {
 
 .over-flash {
   background-color: red;
+}
+
+@media (max-width: 450px) {
+  .btn {
+    height: 8.5rem;       
+    width: 8.5rem;        
+    margin: 0.8rem;     
+    border-radius: 20%;  
+    border: 8px solid black;
+  }
 }
 

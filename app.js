@@ -8,13 +8,16 @@ let level = 0;
 
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keypress", function() {
-  if(started == false) {
-    console.log("game started");
+function startGame() {
+  if(!started) {
     started = true;
     levelUp();
   }
-});
+}
+
+document.addEventListener("keypress", startGame);
+
+/*document.body.addEventListener("touchstart", startGame);*/
 
 function btnFlash(btn) {
   btn.classList.add("flash");
@@ -98,6 +101,7 @@ function btnPress() {
 let allBtns = document.querySelectorAll(".btn");
 for(let btn of allBtns) {
   btn.addEventListener("click", btnPress);
+  btn.addEventListener("touchstart", btnPress);
 }
 
 function reset() {
