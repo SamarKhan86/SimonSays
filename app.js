@@ -105,7 +105,7 @@ function reset() {
   userSeq = [];
   started = false;
   if( level > high ) {
-    high = level-1;
+    high = level;
     document.querySelector("h3").innerText = `Highscore: ${high}`;
   }
   level = 0;
