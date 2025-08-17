@@ -89,6 +89,9 @@ function levelUp() {
 }
 
 function btnPress() {
+  if(!started) {
+    return;
+  }
   let btn = this;
   userFlash(btn);
 
